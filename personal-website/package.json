@@ -6,8 +6,11 @@
     "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-materialize": "^1.0.6",
-    "react-scripts": "1.0.10"
+    "react-materialize": "^1.0.6"
+
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.07"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,5 +19,5 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d build"
   },
-  "homepage": "https://celinechadwick.github.io/celinechadwick.github.io"
+  "homepage": "https://celinechadwick.github.io/website"
 }
