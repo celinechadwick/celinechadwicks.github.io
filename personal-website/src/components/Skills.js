@@ -1,70 +1,66 @@
 import React from "react";
-import {Card, Col, Row} from "react-materialize";
-const cardStyle = {margin:'20px'};
+import {Col, Row} from "react-materialize";
+const sectionStyle = {'padding':'40px', 'font-family':'Futura', 'font-size':'18px'};
+const skills = {'margin' :'30px', 'font-size':'40px', 'letter-spacing':'-.5px', 'font-weight':'bold'};
+const padding={'padding':'20px'};
+const img={'max-height':'120px'}
 
 
 
 const Skills = React.createClass({
 render() {
   return (
-  <div id='skills'>
+  <div id='skills' className="black-text">
+    <div style={sectionStyle}>
+    <Col s={12}>
+        <div className="center red-text" style={skills}>Skills</div>
 
-    <Col m={6} s={12}>
-    <Card className='center z-depth-2'style={cardStyle}>
-        <h5>Skills</h5>
-      <Row>
-    <Col s={6}>
-      <ul className='collection z-depth-2'>
-        <li className="collection-item avatar">
-          <img src="./assets/reactlogo.png" alt="" className="circle"/>
-            <span className="title">React</span>
-        </li>
-
-        <li className="collection-item avatar">
-          <img src="./assets/nodelogo.svg" alt="" className="circle"/>
-            <span className="title">Node.js</span>
-        </li>
-
-        <li className="collection-item avatar">
-          <img src="./assets/rubylogo.jpeg" alt="" className="circle"/>
-            <span className="title">Ruby on Rails</span>
-        </li>
-
-        <li className="collection-item avatar">
-          <img src="./assets/javascriptlogo.png" alt="" className="circle"/>
-            <span className="title">Javascript</span>
-        </li>
-      </ul>
     </Col>
+    <Row className='center'>
+        <Col m={3} s={6} style={padding}>
+            <img src="./assets/Asset 15@2x.png" alt="" className='responsive-img' style={img}/>
+              <div class="caption center-align">React</div>
+        </Col>
 
-    <Col s={6}>
-      <ul className='collection z-depth-2'>
-        <li className="collection-item avatar">
-          <img src="./assets/expresslogo.png" alt="" className="circle"/>
-            <span className="title">Express</span>
-        </li>
+        <Col m={3} s={6} style={padding}>
+          <img src="./assets/Asset 16@2x.png" alt="" className='responsive-img' style={img}/>
+            <div class="caption center-align">Node.js</div>
+        </Col>
 
-        <li className="collection-item avatar">
-          <img src="./assets/postgresql.jpg" alt="" className="circle"/>
-            <span className="title">PostgreSQL</span>
-        </li>
+        <Col m={3} s={6} style={padding}>
+          <img src="./assets/Asset 13@2x.png" alt="" className='responsive-img' style={img}/>
+            <div class="caption center-align">Ruby on Rails</div>
+        </Col>
 
-        <li className="collection-item avatar">
-          <img src="./assets/githubSelect.png" alt="" className="circle"/>
-            <span className="title">Github</span>
-        </li>
+        <Col m={3} s={6} style={padding}>
+          <img src="./assets/Asset 24@2x.png" alt="" className='responsive-img' style={img}/>
+            <div class="caption center">Javascript</div>
+        </Col>
+    </Row>
 
-        <li className="collection-item avatar">
-          <img src="./assets/html.svg" alt="" className="circle"/>
-            <span className="title">HTML</span>
-        </li>
-      </ul>
-    </Col>
+    <Row className='center'>
+        <Col m={3} s={6} style={padding}>
+          <img src="./assets/Asset 17@2x.png" className='height:400px' alt="" className='responsive-img' style={img} />
+            <div class="caption center-align">Express</div>
+        </Col>
 
-</Row>
-</Card>
-</Col>
+        <Col m={3} s={6} style={padding}>
+          <img src="./assets/Asset 18@2x.png" alt="" className='responsive-img' style={img}/>
+            <div class="caption center-align">PostgreSQL</div>
+        </Col>
 
+        <Col m={3} s={6} style={padding}>
+          <img src="./assets/Asset 20@2x.png" alt="" className='responsive-img' style={img}/>
+            <div class="caption center-align">Github</div>
+        </Col>
+
+        <Col m={3} s={6} style={padding}>
+          <img src="./assets/Asset 23@2x.png" alt="" className='responsive-img' style={img}/>
+            <div class="caption center-align">HTML</div>
+        </Col>
+    </Row>
+
+    </div>
   </div>
 
 

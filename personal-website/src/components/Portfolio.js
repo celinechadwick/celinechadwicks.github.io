@@ -1,48 +1,57 @@
 import React from "react";
-import {Card, CardTitle, Col, Row} from 'react-materialize';
-const cardStyle = {margin:'20px'}
+import {Col, Row, Button} from 'react-materialize';
+const hStyle = {'margin-bottom':'60px', 'font-size':'40px', 'letter-spacing':'-.5px', 'font-weight':'bold'};
+const divStyle = {'background-color':'#F2F2F2', 'font-family': 'Futura','padding':'40px'};
+const img = {'max-height':'200px'};
+const margin = {'margin':'20px', 'font-family':'Consolas'};
+const button ={'font-size':'12px', 'width':'200px'};
+const padding={margin:'40px', 'font-weight':'bold', 'font-size':'20px', 'height':'140px'};
 
 const Portfolio = React.createClass({
 render() {
   return (
-  <div id="portfolio">
+  <div id="portfolio" style={divStyle}>
 
-    <Card className='center z-depth-2' style={cardStyle}>
-    <h5>Portfolio</h5>
+  <div style={hStyle} className="center red-text flow-text">Portfolio</div>
       <Row>
-        <Col s={4}>
-          <Card className='card-panel hoverable'
-            header={<CardTitle image='./assets/math.jpg'></CardTitle>}
-            actions={[<a href='https://github.com/celinechadwick/Project-1'>Guess the Number</a>]}>
-            Add and multiply numbers in order to progress through this Javascript game!
-            <a href="https://github.com/celinechadwick/Project-1">
-            <button className='waves-effect waves-teal btn-flat'>View on Github </button>
-            </a>
+        <Col m={4} s={12} className="center">
+            <div className='flow-text'>
+               <img src='./assets/math.jpg' className='responsive-img' style={img} />
+               <br/>
+              <p className='black-text flow-text' style={padding}> Add and multiply numbers in order to progress through this Javascript game</p>
+              <Button waves='light' node='a' href='https://github.com/celinechadwick/Project-1' className="red" style={button}> Guess the Number </Button>
+              <br/>
+              </div>
+
+              <div style={margin}>
+                <a href='https://github.com/celinechadwick/Project-1' className='green-text flow-text'>> See code on Github</a>
+              </div>
+        </Col>
+
+        <Col m={4} s={12} className="center">
+          <div>
+            <img src='./assets/tvflix.jpg' className='responsive-img' style={img}/>
             <br/>
-          </Card>
+            <p className='black-text flow-text' style={padding}>Make an account, and save shows from the tvMaze API to your profile</p>
+            <Button waves='light' node='a' href='https://tvflix-front.herokuapp.com/shows' className="red" style={button}> TVFlix </Button>
+          </div>
+          <div style={margin}>
+          <a href='https://github.com/celinechadwick/tvflix' className='green-text flow-text'>> See code on Github</a>
+          </div>
         </Col>
-        <Col s={4}>
-          <Card className='card-panel hoverable'
-            header={<CardTitle image='./assets/tvflix.jpg'></CardTitle>}
-            actions={[<a href='https://github.com/celinechadwick/tvflix'>Art Wiki</a>]}>
-            Make an account, and save shows from the tvMaze API to your profile!
-            <a href="https://tvflix-front.herokuapp.com/shows">
-            <button className='waves-effect waves-teal btn-flat'>View on Heroku </button>
-            </a>
-          </Card>
-        </Col>
-        <Col s={4}>
-          <Card className='card-panel hoverable'
-            header={<CardTitle image='./assets/artbook.jpg'></CardTitle>}
-            actions={[<a href='https://github.com/celinechadwick/Artbook_Back'>Artbook</a>]}>
-            Find art by keyword, material or style, and save them to your account!
-            <a href="https://artbook-front.herokuapp.com/">
-            <button className='waves-effect waves-teal btn-flat'>View on Heroku </button>
-            </a>
-          </Card>
+
+        <Col m={4} s={12} className="center">
+          <div>
+            <img src='./assets/artbook.jpg' className='responsive-img' style={img}/>
+            <br/>
+            <p className='black-text flow-text' style={padding}>Find art by keyword, material or style, and save them to your account</p>
+            <Button waves='light' node='a' href='https://artbook-front.herokuapp.com/' className="red" style={button}> ArtBook </Button>
+          </div>
+          <div style={margin}>
+          <a href='https://github.com/celinechadwick/Artbook_Back' className='green-text flow-text'>> See code on Github</a>
+          </div>
       </Col>
     </Row>
-  </Card>
 
 </div>
   )
